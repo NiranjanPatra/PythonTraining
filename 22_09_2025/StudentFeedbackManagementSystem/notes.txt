@@ -2,6 +2,7 @@ Notes:
 ===================
 1. Admin credentials are harcoded. Please check the below credentials.
 2. Database connection user and password are harcoded. If you want to test it, change the user and password
+3. Log will be created at default location and name of the log file is "app.log". No harcoded path is used.
 
 Admin Credentials
 ========================
