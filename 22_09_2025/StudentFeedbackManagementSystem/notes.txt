@@ -1,0 +1,9 @@
+Notes:
+===================
+1. Admin credentials are harcoded. Please check the below credentials.
+2. Database connection user and password are harcoded. If you want to test it, change the user and password
+
+Admin Credentials
+========================
+User - root
+Password - admin
