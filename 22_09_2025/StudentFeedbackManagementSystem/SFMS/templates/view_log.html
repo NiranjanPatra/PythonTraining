@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Viewer</title>
+    <style>
+        .log-container {
+            width: 80%;
+            max-height: 500px;
+            margin: 30px auto;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+            font-family: monospace;
+            white-space: pre-line;
+            overflow-y: scroll;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Log File Content</h2>
+
+    <div class="log-container">
+        {{ log_content }}
+    </div>
+
+</body>
+</html>

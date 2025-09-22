@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Feedback</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+        }
+        th {
+            background-color: #4285F4;
+            color: white;
+        }
+        .download-log {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .download-log a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+        }
+        .download-log a:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Student Feedback</h2>
+    <form method="POST" action="/admin/feedback">
+        {% if feedback_list %}
+        <table>
+            <tr>
+                <th>Student</th>
+                <th>Course</th>
+                <th>Rating</th>
+                <th>Comments</th>
+            </tr>
+            {% for feedback in feedback_list %}
+            <tr>
+                <td>{{ feedback.student_name }}</td>
+                <td>{{ feedback.course_name }}</td>
+                <td>{{ feedback.rating }}</td>
+                <td>{{ feedback.comments }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <p style="text-align:center;">No feedback available.</p>
+        {% endif %}
+
+        <div style="text-align: center; margin-top: 20px;">
+            <input type="submit" value="Download Log">
+        </div>
+    </form>
+</body>
+</html>
